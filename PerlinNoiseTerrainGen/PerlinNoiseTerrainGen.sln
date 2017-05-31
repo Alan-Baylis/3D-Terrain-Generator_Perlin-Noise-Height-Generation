@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerlinNoiseTerrainGen", "PerlinNoiseTerrainGen.csproj", "{59EAA8DB-C8E9-A3F4-08F3-7C37B6301BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerlinNoiseTerrainGen.Editor", "PerlinNoiseTerrainGen.Editor.csproj", "{C66DAF1C-C9F5-2B1D-F2D5-D140FDC58A00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59EAA8DB-C8E9-A3F4-08F3-7C37B6301BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EAA8DB-C8E9-A3F4-08F3-7C37B6301BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EAA8DB-C8E9-A3F4-08F3-7C37B6301BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EAA8DB-C8E9-A3F4-08F3-7C37B6301BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66DAF1C-C9F5-2B1D-F2D5-D140FDC58A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66DAF1C-C9F5-2B1D-F2D5-D140FDC58A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66DAF1C-C9F5-2B1D-F2D5-D140FDC58A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66DAF1C-C9F5-2B1D-F2D5-D140FDC58A00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
