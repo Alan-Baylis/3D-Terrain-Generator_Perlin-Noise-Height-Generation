@@ -72,8 +72,8 @@ public class VertexData {
 	int[] indexBuffer;
 	Vector2[] uvCoords;
 
-	Vector3[] borderVertices;
-	int[] borderTriangles;
+	Vector3[] borderVertexArray;
+	int[] borderIndexArray;
 
 	int triangleIndex;
 	int borderTriangleIndex;
@@ -83,13 +83,13 @@ public class VertexData {
 		uvCoords = new Vector2[verticesPerLine * verticesPerLine];
 		indexBuffer = new int[(verticesPerLine-1)*(verticesPerLine-1)*6];
 
-		borderVertices = new Vector3[verticesPerLine * 4 + 4];
-		borderTriangles = new int[24 * verticesPerLine];
+		borderVertexArray = new Vector3[verticesPerLine * 4 + 4];
+		borderIndexArray = new int[24 * verticesPerLine];
 	}
 
 	public void AddVertex(Vector3 vertexPosition, Vector2 uv, int vertexIndex) {
 		if (vertexIndex < 0) {
-			borderVertices [-vertexIndex - 1] = vertexPosition;
+			borderVertexArray [-vertexIndex - 1] = vertexPosition;
 		} else {
 			vertexBuffer [vertexIndex] = vertexPosition;
 			uvCoords [vertexIndex] = uv;
@@ -98,9 +98,9 @@ public class VertexData {
 
 	public void AddTriangle(int a, int b, int c) {
 		if (a < 0 || b < 0 || c < 0) {
-			borderTriangles [borderTriangleIndex] = a;
-			borderTriangles [borderTriangleIndex + 1] = b;
-			borderTriangles [borderTriangleIndex + 2] = c;
+			borderIndexArray [borderTriangleIndex] = a;
+			borderIndexArray [borderTriangleIndex + 1] = b;
+			borderIndexArray [borderTriangleIndex + 2] = c;
 			borderTriangleIndex += 3;
 		} else {
 			indexBuffer [triangleIndex] = a;
@@ -126,12 +126,12 @@ public class VertexData {
 			vertexNormals [vertexIndexC] += triangleNormal;
 		}
 
-		int borderTriangleCount = borderTriangles.Length / 3;
+		int borderTriangleCount = borderIndexArray.Length / 3;
 		for (int i = 0; i < borderTriangleCount; i++) {
 			int normalTriangleIndex = i * 3;
-			int vertexIndexA = borderTriangles [normalTriangleIndex];
-			int vertexIndexB = borderTriangles [normalTriangleIndex + 1];
-			int vertexIndexC = borderTriangles [normalTriangleIndex + 2];
+			int vertexIndexA = borderIndexArray [normalTriangleIndex];
+			int vertexIndexB = borderIndexArray [normalTriangleIndex + 1];
+			int vertexIndexC = borderIndexArray [normalTriangleIndex + 2];
 
 			Vector3 triangleNormal = SurfaceNormalFromIndices (vertexIndexA, vertexIndexB, vertexIndexC);
 			if (vertexIndexA >= 0) {
@@ -155,9 +155,9 @@ public class VertexData {
 	}
 
 	Vector3 SurfaceNormalFromIndices(int indexA, int indexB, int indexC) {
-		Vector3 pointA = (indexA < 0)?borderVertices[-indexA-1] : vertexBuffer [indexA];
-		Vector3 pointB = (indexB < 0)?borderVertices[-indexB-1] : vertexBuffer [indexB];
-		Vector3 pointC = (indexC < 0)?borderVertices[-indexC-1] : vertexBuffer [indexC];
+		Vector3 pointA = (indexA < 0)?borderVertexArray[-indexA-1] : vertexBuffer [indexA];
+		Vector3 pointB = (indexB < 0)?borderVertexArray[-indexB-1] : vertexBuffer [indexB];
+		Vector3 pointC = (indexC < 0)?borderVertexArray[-indexC-1] : vertexBuffer [indexC];
 
 		Vector3 sideAB = pointB - pointA;
 		Vector3 sideAC = pointC - pointA;

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 915, y: 342}
   m_MaxSize: {x: 22010, y: 10021}
   vertical: 0
-  controlID: 146
+  controlID: 147
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,8 +154,8 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
+    m_SelectedIDs: a0250000
+    m_LastClickedID: 9632
     m_ExpandedIDs: d4fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_MinSize: {x: 438, y: 342}
   m_MaxSize: {x: 14008, y: 10021}
   vertical: 0
-  controlID: 111
+  controlID: 112
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 438, y: 342}
   m_MaxSize: {x: 14008, y: 10021}
   vertical: 0
-  controlID: 112
+  controlID: 113
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Unity Tuts\3DNoiseMapGen\PerlinNoiseTerrainGen
+  m_LastProjectPath: D:\Unity Tuts\3DNoiseMapGen\3D-Terrain-Generator_Perlin-Noise-Height-Generation\PerlinNoiseTerrainGen
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
@@ -353,9 +353,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: a0250000
+    m_LastClickedInstanceID: 9632
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 342}
   m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 113
+  controlID: 114
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -465,9 +465,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.5026962, y: 102.23674, z: 2.3809211}
+    m_Target: {x: 310.55798, y: -168.06207, z: -391.55225}
     speed: 2
-    m_Value: {x: -0.5026962, y: 102.23674, z: 2.3809211}
+    m_Value: {x: 310.55798, y: -168.06207, z: -391.55225}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -490,13 +490,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.089243904, y: -0.029872896, z: 0.0026791217, w: -0.99555814}
+    m_Target: {x: -0.32595298, y: -0.3250468, z: 0.12046211, w: -0.87953866}
     speed: 2
-    m_Value: {x: -0.0892439, y: -0.029872894, z: 0.0026791217, w: -0.99555814}
+    m_Value: {x: -0.32595298, y: -0.3250468, z: 0.12046211, w: -0.87953866}
   m_Size:
-    m_Target: 2.8578837
+    m_Target: 1710.0323
     speed: 2
-    m_Value: 2.8578837
+    m_Value: 1710.0323
   m_Ortho:
     m_Target: 0
     speed: 2

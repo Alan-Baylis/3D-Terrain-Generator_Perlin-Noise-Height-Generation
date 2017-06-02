@@ -5,6 +5,7 @@ using System.Collections;
 
 public static class PerlinNoise {
 
+    // Local Mode does not require an estimation for min & max noise heights - Global values must be esitmated for endless Terrain generation. 
 	public enum NormalizeMode {Local, Global};
 
 	public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistance, float lacunarity, Vector2 offset, NormalizeMode normalizeMode) {
@@ -66,6 +67,7 @@ public static class PerlinNoise {
 
 		for (int y = 0; y < mapHeight; y++) {
 			for (int x = 0; x < mapWidth; x++) {
+                //Set the 
 				if (normalizeMode == NormalizeMode.Local) {
 					noiseMap [x, y] = Mathf.InverseLerp (minLocalNoiseHeight, maxLocalNoiseHeight, noiseMap [x, y]);
 				} else {
